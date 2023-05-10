@@ -4,7 +4,6 @@ namespace MatrixThread // Note: actual namespace depends on the project name.
 {
     internal class Program
     {
-        Random r = new Random();
 
         static void Main(string[] args)
         {
@@ -13,11 +12,13 @@ namespace MatrixThread // Note: actual namespace depends on the project name.
             int[,] secondMatrix = new int[m, k];
             int[,] resultMatrix = new int[n, k];
 
-
+            Insert(firstMatrix, n, m);
+            showMatrix(firstMatrix, n, m);
         }
 
-        void Insert(int[,] matrix, int n, int m)
+        static void Insert(int[,] matrix, int n, int m)
         {
+            Random r = new Random();
             for (int i = 0; i < n; i++)
             {
                 for (int j = 0; j < m; j++)
@@ -27,7 +28,7 @@ namespace MatrixThread // Note: actual namespace depends on the project name.
             }
         }
 
-        void showMatrix(int[,] matrix, int n, int m)
+        static void showMatrix(int[,] matrix, int n, int m)
         {
             for (int i = 0; i < n; i++)
             {
